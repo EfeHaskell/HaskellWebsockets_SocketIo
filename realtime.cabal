@@ -1,0 +1,29 @@
+name:                realtime
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/realtime#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+
+Data-Dir: resources
+Data-files:
+  index.html
+  main.js
+  style.css
+
+executable realtime
+  hs-source-dirs:      src
+  main-is:             MainSnap.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5, aeson, attoparsec, bytestring, engine-io == 1.2.15, mtl, stm, text, transformers, unordered-containers, vector, socket-io == 1.3.7, engine-io-snap == 1.0.4, snap-core, snap-server
+  other-modules: Paths_realtime
+  ghc-options: -Wall -O2 -threaded
